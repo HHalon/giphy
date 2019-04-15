@@ -3,7 +3,9 @@ var gifs = ["happy", "funny"];
 function displayGifInfo() {
   var gif = $(this).attr("data-name");
   var queryURl =
-    "https://api.giphy.com/v1/gifs" + gif + "&api_key=dc6zaTOxFJmzC";
+    "https://api.giphy.com/v1/gifs/search?q=" +
+    gif +
+    "&api_QLhaJiH5e6zpvE5eoSS87fSTmmuxv2Ui";
 
   $.ajax({
     url: queryURl,

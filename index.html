@@ -1,34 +1,48 @@
 <!DOCTYPE html>
-<html lang= "en-us">
+<html lang="en">
     <head>
-        <title>API GIPHY</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>GIPHY API</title>
+
+        <!-- Added a link to Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        
+        <!-- This links to the jQuery Library -->
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    	
     </head>
-    <body>
-        <!--title-->
-        <div class= "container text-center">
-            <h1>Gif finder</h1>
+<body>
+
+<body>
+
+<h4 class="text-center" style="color:black">Please click on a button to display 10 giphs and their rating, or add your own button with any search term you choose.</p><p>If there are less than 10 results for it, I will let you know.  Click on the picture to start/stop the animation.</h4>
+
+<!-- This will be where the buttons are added and displayed. -->
+<div id="buttonItems"></div>
+
+<!-- This is the form to add a space-themed button to the array. -->
+<form>
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" id="giph-input" class="form-control" placeholder="Looking for a Giph?">
         </div>
+        <input id="addGiphThing" type="submit" class="btn btn-success" value="Search">
+        <!-- If there are any error messages, they will appear here -->
+        <span id="entry" style="color: white; background: red"></span>
+    </div>
+</form>
 
-        <!--gifs will be dumped here-->
-        <div id="buttons-view"></div>
+<!-- This is where the ratings and images will be shown when the user clicks a movie button. --> 
+<div id="ratings"></div>
 
-        <form id="gif-form">
-            <label for="gif-input">Find a gif</label>
-            <input type="text" id="gif-input"></form></br>
 
-            <input id="add-gif" type="submit" value="Find a gif">
-        </form>
-        <!--button triggers new gif added-->
 
-        <div id="movies-view"></div>
 
-       <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>--> 
-       <script
-       src="https://code.jquery.com/jquery-3.4.0.min.js"
-       integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-       crossorigin="anonymous"></script>
-        <script src="API.js"></script>
-    </body>
+
+<!-- Beginning of the javascript -->
+<script src="API.js">
+    // This is the initial array.
+
+</script>
+</body>
 </html>

@@ -36,13 +36,13 @@ $("#addGiphThing").on("click", function(event) {
 });
 $(document).on("click", ".space", display);
 function display() {
-    // is just to clear out any error message (if there is one)
+    // is just to clear out any error message 
     $("#entry").empty();
     var giphTerm = $(this).attr("giph-name");
-    // the GIPHY query.  limits to 10 results
+    // limits to 10 results
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + giphTerm + "&limit=10&api_key=dc6zaTOxFJmzC";
     $.ajax({ url: queryURL, method: "GET"}).done(function(response) {
-        // runs 10 times (limit is 10 in query) to show all the GIPHY pictures from the website's response.
+        // runs 10 times to show all the GIPHY pictures from the website's response.
         for (var j = 0; j < response.data.length; j++) {
             
             // gets the animated gif URL
@@ -67,7 +67,7 @@ function display() {
             $("#ratings").prepend(ratingAndImage);
             // when the user clicks on a picture, this will either start or stop the animation of that picture.
             $(giphImage).on("click", function(event) {
-                // to clear out any error message (if there is one)
+                // to clear out any error message 
                 $("#entry").empty();
                 
                 var state = $(this).attr("state");
